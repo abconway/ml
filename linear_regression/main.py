@@ -26,6 +26,11 @@ def linear_regression_one_dimension():
     plt.plot(X, Yhat)
     plt.show()
 
+    d1 = Y - Yhat
+    d2 = Y - Y.mean()
+    r2 = 1 - (d1.dot(d1) / d2.dot(d2))
+    print(f"R Squared: {r2}")
+
 
 if __name__ == '__main__':
     linear_regression_one_dimension()
